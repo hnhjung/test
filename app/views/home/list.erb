@@ -1,0 +1,11 @@
+<div class="container" style="margin-top: 30px;">
+    <h2>보낸메일함</h2>
+    <% @every_post.each do |p| %>
+    받는 사람: <%= p.receiver %> <br>
+    이메일 제목: <%= p.title %> <br>
+    이메일 내용: <%= p.content %> <br>
+    보낸 시간: <%= p.created_at %>
+    <hr>
+    <% end %>
+    <a class="btn btn-default" role="button" href='/'>메일쓰기</a>
+</div>
